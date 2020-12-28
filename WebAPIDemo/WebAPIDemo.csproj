@@ -200,6 +200,10 @@
     <Compile Include="Migrations\202012282214223_InitalizeEmployees.designer.cs">
       <DependentUpon>202012282214223_InitalizeEmployees.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012282318087_AddCustomer.cs" />
+    <Compile Include="Migrations\202012282318087_AddCustomer.Designer.cs">
+      <DependentUpon>202012282318087_AddCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModelFirst\Customer.cs">
       <DependentUpon>CustomersModel.tt</DependentUpon>
@@ -345,6 +349,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202012282214223_InitalizeEmployees.resx">
       <DependentUpon>202012282214223_InitalizeEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012282318087_AddCustomer.resx">
+      <DependentUpon>202012282318087_AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
