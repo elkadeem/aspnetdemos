@@ -169,6 +169,30 @@
     <Compile Include="Entities\Customer.cs" />
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\EmployeesDbContext.cs" />
+    <Compile Include="GeneratedDbContext\Customer.cs">
+      <DependentUpon>CustomerDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedDbContext\CustomerDbContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerDbContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedDbContext\CustomerDbContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedDbContext\CustomerDbContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerDbContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedDbContext\Employee.cs">
+      <DependentUpon>CustomerDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedForOnce\Customer.cs" />
+    <Compile Include="GeneratedForOnce\CustomerDbContext2.cs" />
+    <Compile Include="GeneratedForOnce\Employee.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -177,6 +201,27 @@
       <DependentUpon>202012282214223_InitalizeEmployees.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="ModelFirst\Customer.cs">
+      <DependentUpon>CustomersModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelFirst\CustomersModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomersModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelFirst\CustomersModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomersModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelFirst\CustomersModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomersModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ModelFirst\Employee.cs">
+      <DependentUpon>CustomersModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -187,7 +232,27 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="GeneratedDbContext\CustomerDbContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CustomerDbContext.edmx</DependentUpon>
+      <LastGenOutput>CustomerDbContext.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="GeneratedDbContext\CustomerDbContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CustomerDbContext.edmx</DependentUpon>
+      <LastGenOutput>CustomerDbContext.cs</LastGenOutput>
+    </Content>
     <Content Include="Global.asax" />
+    <Content Include="ModelFirst\CustomersModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CustomersModel.Context.cs</LastGenOutput>
+      <DependentUpon>CustomersModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="ModelFirst\CustomersModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CustomersModel.cs</LastGenOutput>
+      <DependentUpon>CustomersModel.edmx</DependentUpon>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -209,6 +274,20 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <EntityDeploy Include="GeneratedDbContext\CustomerDbContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CustomerDbContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="GeneratedDbContext\CustomerDbContext.edmx.diagram">
+      <DependentUpon>CustomerDbContext.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="ModelFirst\CustomersModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CustomersModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="ModelFirst\CustomersModel.edmx.diagram">
+      <DependentUpon>CustomersModel.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -232,7 +311,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="GeneratedDbContext\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -268,6 +346,9 @@
     <EmbeddedResource Include="Migrations\202012282214223_InitalizeEmployees.resx">
       <DependentUpon>202012282214223_InitalizeEmployees.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
